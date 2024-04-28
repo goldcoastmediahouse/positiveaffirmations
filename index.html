@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Affirmation Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+        #affirmation {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Affirmation</h1>
+    <div id="affirmation"></div>
+
+    <script>
+        // List of positive affirmations
+        const affirmations = [
+            "I love and accept myself unconditionally.",
+            "I am worthy of love and happiness.",
+            "I believe in myself and my abilities.",
+            "I am at peace with who I am.",
+            "I am capable of achieving my dreams.",
+            "I radiate positivity and joy.",
+            "I am grateful for my life and experiences.",
+            "I deserve all the good things that come my way.",
+            "I am enough just as I am.",
+            "I trust in the process of life.",
+            "I am confident and strong in all that I do.",
+            "I am surrounded by love and kindness.",
+            "I embrace my imperfections as opportunities for growth.",
+            "I forgive myself for any mistakes and learn from them.",
+            "I attract positivity and abundance into my life.",
+            "I am becoming a better version of myself every day.",
+            "I am open to new adventures and experiences.",
+            "I am in control of my thoughts and emotions.",
+            "I am resilient and can overcome any challenge.",
+            "I am aligned with my true purpose in life.",
+            "I am a beacon of light and hope for others.",
+            "I deserve success and will achieve it.",
+            "I am filled with courage to face my fears.",
+            "I am constantly evolving and improving.",
+            "I honor my unique talents and abilities.",
+            "I choose happiness and joy in every moment.",
+            "I am deserving of all the good things life has to offer.",
+            "I am surrounded by supportive and loving people.",
+            "I am worthy of respect and admiration.",
+            "I am free to create the life I desire.",
+            "I am a magnet for positive energy."
+        ];
+
+        // Function to display a random affirmation each day
+        function displayDailyAffirmation() {
+            const date = new Date();
+            const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            const index = dayOfYear % affirmations.length;
+            document.getElementById('affirmation').textContent = affirmations[index];
+        }
+
+        // Call the function to display today's affirmation
+        displayDailyAffirmation();
+    </script>
+</body>
+</html>
